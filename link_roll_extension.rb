@@ -7,12 +7,6 @@ class LinkRollExtension < Radiant::Extension
   url "http://github.com/radiant/radiant-link-roll-extension"
   
   define_routes do |map|
-    # map.with_options(:controller => 'admin/links') do |link|
-    #   link.link_index   'admin/links',              :action => 'index'
-    #   link.link_new     'admin/links/new',          :action => 'new'
-    #   link.link_edit    'admin/links/edit/:id',     :action => 'edit'
-    #   link.link_remove  'admin/links/remove/:id',   :action => 'remove'
-    # end
     map.namespace :admin, :member => { :remove => :get } do |admin|
       admin.resources :links
     end

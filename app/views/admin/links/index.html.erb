@@ -14,11 +14,10 @@
   </thead>
 
   <tbody>
-    <%# @links.each do |link| %>
-    <% Link.find(:all).each do |link| %>
+    <% @links.each do |link| %>
       <tr class="node level-1">
         <td class="link">
-          <%# image('links/link') %>
+          <%= image('links/link') %>
           <%= link_to link.title, edit_admin_link_url(:id => link.id) %>
         </td>
         <td class="remove">
