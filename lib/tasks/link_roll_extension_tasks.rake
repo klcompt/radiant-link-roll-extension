@@ -2,7 +2,9 @@ namespace :radiant do
   namespace :extensions do
     namespace :link_roll do
       
-      desc "Installs the Link Roll extension, by running migrations and copying assets for this extension."
+      desc %Q{Installs the Link Roll extension. 
+    Runs radiant:extension:link_roll:migrate,
+    then radiant:extension:link_roll:update}
       task :install => [:migrate, :update]
       
       desc "Runs the migration of the Link Roll extension"
