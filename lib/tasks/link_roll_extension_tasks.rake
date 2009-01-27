@@ -2,6 +2,9 @@ namespace :radiant do
   namespace :extensions do
     namespace :link_roll do
       
+      desc "Installs the Link Roll extension, by running migrations and copying assets for this extension."
+      task :install => [:migrate, :update]
+      
       desc "Runs the migration of the Link Roll extension"
       task :migrate => :environment do
         require 'radiant/extension_migrator'
