@@ -17,11 +17,11 @@
     <% @links.each do |link| %>
       <tr class="node level-1">
         <td class="link">
-          <%# image('links/link') %>
-          <%= link_to link.title, link_edit_url(:id => link.id) %>
+          <%= image('links/link') %>
+          <%= link_to link.title, edit_admin_link_url(:id => link.id) %>
         </td>
         <td class="remove">
-          <%= link_to image('remove', :alt => 'Remove link'), link_remove_url(:id => link.id) %>
+          <%= link_to image('remove', :alt => 'Remove link'), remove_admin_link_url(:id => link.id) %>
         </td>
       </tr>
     <% end %>

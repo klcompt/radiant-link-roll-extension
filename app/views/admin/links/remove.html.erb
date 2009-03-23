@@ -13,10 +13,10 @@
   </tbody>
 </table>
 
-<% form_tag do %>
+<% form_for [:admin, @link], :html => {:method => :delete} do %>
   <p class="buttons">
     <input class="button" type="submit" value="Delete Link"/>
     or
-    <%= link_to 'Cancel', link_index_url %>
+    <%= link_to 'Cancel', admin_links_url %>
   </p>
 <%- end -%>

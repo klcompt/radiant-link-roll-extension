@@ -1,4 +1,4 @@
-class Admin::LinksController < Admin::AbstractModelController
+class Admin::LinksController < Admin::ResourceController
   model_class Link
 
   def index
