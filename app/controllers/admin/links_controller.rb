@@ -4,7 +4,7 @@ class Admin::LinksController < Admin::ResourceController
   def index
     @links = Link.find(:all, :order => 'created_at DESC')
   end
-
+# 
 #  #allow title and url to be set with a bookmarklet
 #  def new    
 #    self.model = model_class.new(:title => params[:title], :url => params[:url])
